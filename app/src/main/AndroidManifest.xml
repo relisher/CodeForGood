@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.anton.codeforgood" >
-   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -30,6 +31,10 @@
         <activity
             android:name=".PictureInfo"
             android:label="@string/title_activity_picture_info" >
+        </activity>
+        <activity
+            android:name=".VendorOptionsActivity"
+            android:label="@string/title_activity_vendor_option_menu" >
         </activity>
     </application>
 

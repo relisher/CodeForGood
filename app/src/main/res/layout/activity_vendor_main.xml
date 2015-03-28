@@ -23,7 +23,8 @@
         android:text="@string/receipt"
         android:id="@+id/receiptButton"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:onClick="receiptButton"/>
 
     <Button
         android:layout_width="wrap_content"
