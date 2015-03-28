@@ -38,7 +38,8 @@ public class VendorMainActivity extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            Intent i = new Intent(this,VendorOptionsActivity.class);
+            startActivity(i);
         }
 
         return super.onOptionsItemSelected(item);
