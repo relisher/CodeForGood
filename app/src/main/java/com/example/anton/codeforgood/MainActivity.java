@@ -34,7 +34,8 @@ public class MainActivity extends Activity {
                 password.getText().toString().equals("admin")){
             Toast.makeText(getApplicationContext(), "Redirecting to Food Bank Screen",
                     Toast.LENGTH_SHORT).show();
-
+            Intent menuIntent = new Intent(this, FoodBankActivity.class);
+            startActivity(menuIntent);
         }
         if(username.getText().toString().equals("notadmin") &&
                 password.getText().toString().equals("notadmin")){

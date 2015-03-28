@@ -21,12 +21,17 @@
             android:label="@string/title_activity_vendor_main" >
         </activity>
         <activity
+<<<<<<< HEAD
             android:name=".MainActivity2Activity"
             android:label="@string/title_activity_main_activity2" >
         </activity>
         <activity
             android:name=".Camera"
             android:label="@string/title_activity_camera" >
+=======
+            android:name=".FoodBankActivity"
+            android:label="@string/title_activity_food_bank" >
+>>>>>>> a06ad430e57d73dc00ec52e94df95d2fa4e664f5
         </activity>
     </application>
 
