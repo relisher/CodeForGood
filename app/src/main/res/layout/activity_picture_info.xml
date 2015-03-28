@@ -30,7 +30,7 @@
         android:inputType="number"
         android:ems="10"
         android:id="@+id/poundsText"
-        android:text="Weight(Pounds)"
+        android:hint="Weight(Pounds)"
         android:layout_below="@+id/editText3"
         android:layout_alignParentStart="true" />
 
@@ -48,7 +48,7 @@
         android:inputType="date"
         android:ems="10"
         android:id="@+id/dateText"
-        android:text="Expiration"
+        android:hint="Expiration"
         android:layout_below="@+id/poundsText"
         android:layout_alignParentStart="true" />
 
@@ -58,7 +58,7 @@
         android:inputType="textMultiLine"
         android:ems="10"
         android:id="@+id/editText3"
-        android:text="Description"
+        android:hint="Description"
         android:layout_below="@+id/textView6"
         android:layout_alignParentStart="true"
         android:layout_marginTop="41dp"
