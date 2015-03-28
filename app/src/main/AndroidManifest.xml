@@ -42,6 +42,10 @@
             android:name=".ClaimPage"
             android:label="@string/title_activity_claim_page" >
         </activity>
+        <activity
+            android:name=".Transportation"
+            android:label="@string/title_activity_transportation" >
+        </activity>
     </application>
 
 </manifest>

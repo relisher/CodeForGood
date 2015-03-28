@@ -18,4 +18,5 @@
     <string name="title_activity_picture_info">PictureInfo</string>
     <string name="title_activity_vendor_option_menu">VendorOptionMenu</string>
     <string name="title_activity_claim_page">ClaimPage</string>
+    <string name="title_activity_transportation">Transportation</string>
 </resources>
