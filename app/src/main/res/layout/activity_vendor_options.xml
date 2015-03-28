@@ -27,6 +27,7 @@
         android:id="@+id/button"
         android:layout_below="@+id/editText"
         android:layout_alignParentEnd="true"
-        android:drawableRight="@drawable/ic_action_location_searching"/>
+        android:drawableRight="@drawable/ic_action_location_searching"
+        android:onClick="getLocation" />
 
 </RelativeLayout>
