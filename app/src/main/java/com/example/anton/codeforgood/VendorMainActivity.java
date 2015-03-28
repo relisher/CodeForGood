@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 
 public class VendorMainActivity extends ActionBarActivity {
@@ -43,5 +44,10 @@ public class VendorMainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void receiptButton(View view) {
+        Toast.makeText(getApplicationContext(), "Not yet implemented",
+                Toast.LENGTH_SHORT).show();
     }
 }
