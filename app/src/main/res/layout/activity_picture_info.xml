@@ -31,18 +31,8 @@
         android:ems="10"
         android:id="@+id/poundsText"
         android:text="Weight(Pounds)"
-        android:layout_below="@+id/descriptionText"
-        android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/textView6" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/descriptionText"
-        android:layout_below="@+id/textView6"
-        android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/imageButton"
-        android:text="Description" />
+        android:layout_below="@+id/editText3"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -58,8 +48,20 @@
         android:inputType="date"
         android:ems="10"
         android:id="@+id/dateText"
+        android:text="Expiration"
         android:layout_below="@+id/poundsText"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/editText3"
+        android:text="Description"
+        android:layout_below="@+id/textView6"
         android:layout_alignParentStart="true"
-        android:text="Expiration" />
+        android:layout_marginTop="41dp"
+        android:layout_alignEnd="@+id/imageButton" />
 
 </RelativeLayout>
