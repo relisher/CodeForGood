@@ -6,32 +6,22 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.example.anton.codeforgood.VendorMainActivity">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/addDonationItem"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentStart="true"
         android:id="@+id/addDonation"
-        android:onClick="addDonation"/>
+        android:onClick="addDonation"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="153dp" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/receipt"
         android:id="@+id/receiptButton"
+        android:onClick="receiptButton"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:onClick="receiptButton"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/optionsText"
-        android:id="@+id/Options"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

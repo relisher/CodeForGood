@@ -22,11 +22,6 @@ public class VendorMainActivity extends ActionBarActivity {
 
     }
 
-    public void receiptButton(View view){
-        Intent intent = new Intent(this, PictureInfo.class);
-        startActivity(intent);
-    }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
