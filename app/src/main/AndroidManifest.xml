@@ -20,6 +20,10 @@
             android:name=".VendorMainActivity"
             android:label="@string/title_activity_vendor_main" >
         </activity>
+        <activity
+            android:name=".FoodBankActivity"
+            android:label="@string/title_activity_food_bank" >
+        </activity>
     </application>
 
 </manifest>

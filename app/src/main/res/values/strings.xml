@@ -12,4 +12,5 @@
     <string name="recipt">Receipt</string>
     <string name="receipt">receipt</string>
     <string name="optionsText">Options</string>
+    <string name="title_activity_food_bank">FoodBankActivity</string>
 </resources>
