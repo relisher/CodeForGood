@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import java.io.File;
 
@@ -18,7 +19,7 @@ public class PictureInfo extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_picture_info);
-        ImageButton img = (ImageButton)findViewById(R.id.imageButton);
+        ImageView img = (ImageView)findViewById(R.id.imageView);
         String imageName = "food.jpg";
         Bitmap bmp = BitmapFactory.decodeFile(Environment.getExternalStorageDirectory()
                 + File.separator + imageName);
