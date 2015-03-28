@@ -8,4 +8,5 @@
     <string name="Login">Login:</string>
     <string name="attempts">Attempts Left:</string>
     <string name="title_activity_vendor_main">VendorMainActivity</string>
+    <string name="addDonationItem">Add new donation items</string>
 </resources>
