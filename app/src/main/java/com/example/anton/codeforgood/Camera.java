@@ -66,14 +66,24 @@ public class Camera extends Activity {
                 photo.compress(Bitmap.CompressFormat.JPEG, 40, bytes);
                 Random randomGenerator = new Random();
                 randomGenerator.nextInt();
-                String newimagename = randomGenerator.toString() + ".jpg";
+                String newimagename = "food.jpg";
                 File f = new File(Environment.getExternalStorageDirectory()
                         + File.separator + newimagename);
-                try {
-                    f.createNewFile();
-                } catch (IOException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
+                if(!f.exists()){
+                    try {
+                        f.createNewFile();
+                    } catch (IOException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+                }else{
+                    f.delete();
+                    try {
+                        f.createNewFile();
+                    } catch (IOException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
                 }
                 //write the bytes in file
 
@@ -85,8 +95,8 @@ public class Camera extends Activity {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
                 }
-                String uri = f.getAbsolutePath();
-                //this is the url that where you are saved the image
+                Intent cameraIntent = new Intent(this, PictureInfo.class);
+                startActivity(cameraIntent);
             }
             super.onActivityResult(requestCode, resultCode, data);
         }
