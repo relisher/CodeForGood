@@ -1,43 +1,28 @@
 package com.example.anton.codeforgood;
 
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.os.Bundle;
-import android.os.Environment;
 import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.ImageView;
 
-import java.io.File;
 
-
-public class PictureInfo extends ActionBarActivity {
+public class PictureViewActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_picture_info);
-        ImageView img = (ImageView) findViewById(R.id.imageView);
-        String imageName = "food.jpg";
-        Constants.image = BitmapFactory.decodeFile(Environment.getExternalStorageDirectory()
-                + File.separator + imageName);
-        img.setImageBitmap(Constants.image);
+        setContentView(R.layout.activity_picture_view);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_picture_info, menu);
+        ImageView img = (ImageView) findViewById(R.id.imageView2);
+       img.setImageBitmap(Constants.image);
+        getMenuInflater().inflate(R.menu.menu_picture_view, menu);
         return true;
-    }
-
-    public void popupImage(View view) {
-    Intent i = new Intent(this, PictureViewActivity.class);
-       startActivity(i);
     }
 
     @Override
