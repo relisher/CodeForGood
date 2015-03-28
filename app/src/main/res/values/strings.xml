@@ -15,4 +15,5 @@
     <string name="title_activity_main_activity2">MainActivity2Activity</string>
     <string name="title_activity_camera">Camera</string>
     <string name="title_activity_food_bank">FoodBankActivity</string>
+    <string name="title_activity_picture_info">PictureInfo</string>
 </resources>

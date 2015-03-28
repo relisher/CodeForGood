@@ -26,6 +26,10 @@
             android:name=".FoodBankActivity"
             android:label="@string/title_activity_food_bank" >
         </activity>
+        <activity
+            android:name=".PictureInfo"
+            android:label="@string/title_activity_picture_info" >
+        </activity>
     </application>
 
 </manifest>
