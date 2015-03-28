@@ -104,4 +104,30 @@
         android:layout_alignBottom="@+id/textView7"
         android:layout_alignStart="@+id/editText4" />
 
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/editText6"
+        android:layout_toEndOf="@+id/scrollView"
+        android:layout_marginTop="41dp"
+        android:layout_above="@+id/button2"
+        android:weightSum="1">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I will deliver"
+            android:id="@+id/radioButton"
+            android:layout_weight="0.31"
+            android:checked="false" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I will not deliver"
+            android:id="@+id/radioButton2"
+            android:layout_weight="0.31"
+            android:checked="true" />
+    </RadioGroup>
+
 </RelativeLayout>
