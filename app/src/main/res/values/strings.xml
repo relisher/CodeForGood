@@ -12,4 +12,6 @@
     <string name="recipt">Receipt</string>
     <string name="receipt">receipt</string>
     <string name="optionsText">Options</string>
+    <string name="title_activity_main_activity2">MainActivity2Activity</string>
+    <string name="title_activity_camera">Camera</string>
 </resources>

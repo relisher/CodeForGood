@@ -15,7 +15,8 @@
         android:text="@string/addDonationItem"
         android:layout_below="@+id/textView"
         android:layout_alignParentStart="true"
-        android:id="@+id/addDonation"/>
+        android:id="@+id/addDonation"
+        android:onClick="addDonation"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

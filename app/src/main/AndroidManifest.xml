@@ -20,6 +20,14 @@
             android:name=".VendorMainActivity"
             android:label="@string/title_activity_vendor_main" >
         </activity>
+        <activity
+            android:name=".MainActivity2Activity"
+            android:label="@string/title_activity_main_activity2" >
+        </activity>
+        <activity
+            android:name=".Camera"
+            android:label="@string/title_activity_camera" >
+        </activity>
     </application>
 
 </manifest>
