@@ -7,7 +7,9 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
@@ -21,15 +23,21 @@ import java.io.InputStream;
 import java.util.Random;
 
 
+
 public class Camera extends Activity {
 
     private static final int REQUEST_CODE = 1;
     private Button button_1;
     public int TAKE_PICTURE = 1;
     private ImageView image_view;
-    private Bitmap bitmap;
+    private static final int CAMERA_REQUEST = 1888;
+    String fileName = "capturedImage.jpg";
+    private static Uri mCapturedImageURI;
+    private String selectedImagePath;
 
-    /** Called when the activity is first created. */
+    /**
+     * Called when the activity is first created.
+     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,9 +49,8 @@ public class Camera extends Activity {
         button_1.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View arg0) {
-
-                Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
-                startActivityForResult(intent, TAKE_PICTURE);
+                Intent cameraIntent = new Intent("android.media.action.IMAGE_CAPTURE");
+                startActivityForResult(cameraIntent, CAMERA_REQUEST);
             }
         });
     }
@@ -52,22 +59,36 @@ public class Camera extends Activity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         // TODO Auto-generated method stub
-        if (requestCode == REQUEST_CODE && resultCode == Activity.RESULT_OK)
-            try {
-                // We need to recyle unused bitmaps
-                if (bitmap != null) {
-                    bitmap.recycle();
+        if (resultCode == RESULT_OK) {
+            if (requestCode == CAMERA_REQUEST) {
+                Bitmap photo = (Bitmap) data.getExtras().get("data");
+                ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+                photo.compress(Bitmap.CompressFormat.JPEG, 40, bytes);
+                Random randomGenerator = new Random();
+                randomGenerator.nextInt();
+                String newimagename = randomGenerator.toString() + ".jpg";
+                File f = new File(Environment.getExternalStorageDirectory()
+                        + File.separator + newimagename);
+                try {
+                    f.createNewFile();
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
                 }
-                InputStream stream = getContentResolver().openInputStream(
-                        data.getData());
-                bitmap = BitmapFactory.decodeStream(stream);
-                stream.close();
-                image_view.setImageBitmap(bitmap);
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
+                //write the bytes in file
+
+                try {
+                    FileOutputStream fo = new FileOutputStream(f.getAbsoluteFile());
+
+                    fo.write(bytes.toByteArray());
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+                String uri = f.getAbsolutePath();
+                //this is the url that where you are saved the image
             }
-        super.onActivityResult(requestCode, resultCode, data);
+            super.onActivityResult(requestCode, resultCode, data);
+        }
     }
 }
