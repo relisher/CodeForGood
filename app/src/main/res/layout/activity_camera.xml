@@ -17,7 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="pickImage"
-        android:text="Button" >
+        android:text="Take Picture of Food" >
     </Button>
 
 
