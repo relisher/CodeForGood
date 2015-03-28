@@ -1,24 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.anton.codeforgood">
+    package="com.example.anton.codeforgood" >
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
-
-
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme">
-
+        android:theme="@style/AppTheme" >
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,21 +24,24 @@
         </activity>
         <activity
             android:name=".VendorMainActivity"
-            android:label="@string/title_activity_vendor_main"></activity>
+            android:label="@string/title_activity_vendor_main" />
         <activity
             android:name=".Camera"
-            android:label="@string/title_activity_camera">
-
+            android:label="@string/title_activity_camera" >
         </activity>
         <activity
             android:name=".FoodBankActivity"
-            android:label="Food Bank Panel"></activity>
+            android:label="Food Bank Panel" />
         <activity
             android:name=".PictureInfo"
-            android:label="@string/title_activity_picture_info"></activity>
+            android:label="@string/title_activity_picture_info" />
         <activity
             android:name=".VendorOptionsActivity"
-            android:label="@string/title_activity_vendor_option_menu"></activity>
+            android:label="@string/title_activity_vendor_option_menu" />
+        <activity
+            android:name=".ClaimPage"
+            android:label="@string/title_activity_claim_page" >
+        </activity>
     </application>
 
 </manifest>
