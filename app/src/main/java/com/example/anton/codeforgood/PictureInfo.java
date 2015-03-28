@@ -1,9 +1,15 @@
 package com.example.anton.codeforgood;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Environment;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageButton;
+
+import java.io.File;
 
 
 public class PictureInfo extends ActionBarActivity {
@@ -12,6 +18,11 @@ public class PictureInfo extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_picture_info);
+        ImageButton img = (ImageButton)findViewById(R.id.imageButton);
+        String imageName = "food.jpg";
+        Bitmap bmp = BitmapFactory.decodeFile(Environment.getExternalStorageDirectory()
+                + File.separator + imageName);
+        img.setImageBitmap(bmp);
     }
 
 

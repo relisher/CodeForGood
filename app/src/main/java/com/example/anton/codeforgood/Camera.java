@@ -64,11 +64,9 @@ public class Camera extends Activity {
                 Bitmap photo = (Bitmap) data.getExtras().get("data");
                 ByteArrayOutputStream bytes = new ByteArrayOutputStream();
                 photo.compress(Bitmap.CompressFormat.JPEG, 40, bytes);
-                Random randomGenerator = new Random();
-                randomGenerator.nextInt();
-                String newimagename = "food.jpg";
+                String newImageName = "food.jpg";
                 File f = new File(Environment.getExternalStorageDirectory()
-                        + File.separator + newimagename);
+                        + File.separator + newImageName);
                 if(!f.exists()){
                     try {
                         f.createNewFile();
@@ -76,7 +74,17 @@ public class Camera extends Activity {
                         // TODO Auto-generated catch block
                         e.printStackTrace();
                     }
-                }else{
+                    try {
+                        FileOutputStream fo = new FileOutputStream(f.getAbsoluteFile());
+
+                        fo.write(bytes.toByteArray());
+                    } catch (IOException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+                }
+                else
+                {
                     f.delete();
                     try {
                         f.createNewFile();
@@ -84,17 +92,18 @@ public class Camera extends Activity {
                         // TODO Auto-generated catch block
                         e.printStackTrace();
                     }
+                    try {
+                        FileOutputStream fo = new FileOutputStream(f.getAbsoluteFile());
+
+                        fo.write(bytes.toByteArray());
+                    } catch (IOException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
                 }
                 //write the bytes in file
 
-                try {
-                    FileOutputStream fo = new FileOutputStream(f.getAbsoluteFile());
 
-                    fo.write(bytes.toByteArray());
-                } catch (IOException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-                }
                 Intent cameraIntent = new Intent(this, PictureInfo.class);
                 startActivity(cameraIntent);
             }
