@@ -1,6 +1,7 @@
 package com.example.anton.codeforgood;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -20,7 +21,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.LoginActivity);
+        setContentView(R.layout.activity_login);
         username = (EditText)findViewById(R.id.editText1);
         password = (EditText)findViewById(R.id.editText2);
         attempts = (TextView)findViewById(R.id.textView5);
@@ -31,8 +32,16 @@ public class MainActivity extends Activity {
     public void login(View view){
         if(username.getText().toString().equals("admin") &&
                 password.getText().toString().equals("admin")){
-            Toast.makeText(getApplicationContext(), "Redirecting...",
+            Toast.makeText(getApplicationContext(), "Redirecting to Food Bank Screen",
                     Toast.LENGTH_SHORT).show();
+
+        }
+        if(username.getText().toString().equals("notadmin") &&
+                password.getText().toString().equals("notadmin")){
+            Toast.makeText(getApplicationContext(), "Redirecting to Vendor Screen",
+                    Toast.LENGTH_SHORT).show();
+            Intent menuIntent = new Intent(this, VendorMainActivity.class);
+            startActivity(menuIntent);
         }
         else{
             Toast.makeText(getApplicationContext(), "Wrong Credentials",
